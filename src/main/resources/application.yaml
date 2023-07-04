@@ -1,0 +1,18 @@
+server:
+  port: 9090
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/my-realm
+          jwk-set-uri: http://localhost:8080/realms/my-realm/protocol/openid-connect/certs
+
+logging:
+  level:
+    org.springframework.security: TRACE
+
+
+
+
